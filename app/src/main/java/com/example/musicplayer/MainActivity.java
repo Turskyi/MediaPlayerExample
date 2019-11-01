@@ -2,10 +2,11 @@ package com.example.musicplayer;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
 //        2)
 //        Uri myUri = Uri.parse(Uri.decode(
-//                        "https://cdnet2.mixmuz" +
-//                                ".ru/5a482e3b688d/652e3465b630" +
-//                                "/b31996b77e2788855af79da85f7dc4c8-aac5575-dc7a0ab-1-560cd631608" +
-//                                "/%D0%92%D1%96%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F" +
-//                                ".%D0%A2%D0%B8%D1%88%D1%96%20%E2%80%94%20%D0%91%D0%B5%D0%B7%D0%BE%D0%B4%D0%BD%D1%8F" +
-//                                ".mp3")); // initialize Uri here
+//                "https://cdnet2.mixmuz" +
+//                        ".ru/5a482e3b688d/652e3465b630" +
+//                        "/b31996b77e2788855af79da85f7dc4c8-aac5575-dc7a0ab-1-560cd631608" +
+//                        "/%D0%92%D1%96%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F" +
+//                        ".%D0%A2%D0%B8%D1%88%D1%96%20%E2%80%94%20%D0%91%D0%B5%D0%B7%" +
+//                        "D0%BE%D0%B4%D0%BD%D1%8F" +
+//                        ".mp3")); // initialize Uri here
 //        mediaPlayer = new MediaPlayer();
 //        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 //        try {
@@ -40,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
-//        3)
+//
+////        3)
 //        String url = "https://cdnet2.mixmuz" +
 //                ".ru/5a482e3b688d/652e3465b630" +
 //                "/b31996b77e2788855af79da85f7dc4c8-aac5575-dc7a0ab-1-560cd631608" +
@@ -70,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        Toast.makeText(MainActivity.this, "I'm done", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "I'm done",
+                                Toast.LENGTH_SHORT).show();
                     }
                 });
             }
